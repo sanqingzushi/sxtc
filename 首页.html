@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Put your description here.">
+		<title>felx 布局</title>
+		<style>
+		body{
+			margin: 0;
+			height: 100vh;
+			background-color: #f5f5f5;
+		}
+	/* 	*{
+			border: 1px solid black;
+		} */
+		.yinying {
+		          box-shadow:1px 1px 10px #dcdcdc; 	
+			}
+		.flex{
+			 display: flex;
+		}
+		.baiSe{
+			background-color:#ffffff ;
+		}
+		.flex1{
+			flex: 1;
+		}
+		.column{
+			flex-direction: column;
+		}
+		.mg8{
+			margin: 10px;
+		}
+		.mgr8{
+			margin-right: 10px;
+		}
+		.mgt8{
+			margin-top: 10px;
+		}
+		.daohang{
+			border-bottom: 1px solid rgb(229, 229, 229);
+			font-size: 14px;
+			color: #666;
+			background-color: #ffffff;
+		}
+		a{
+			display: block;
+		   color: #666;
+		   text-decoration: none;
+		   height: 50px;
+		   text-indent: 2em;
+		   line-height: 50px;
+		}
+		a:hover{
+			background-color: #f08550;
+			color: #ffffff;
+			font-size: 16px;
+		}
+		.box1{
+			
+			margin: 10px;
+		}
+		/* 当屏幕宽度小于600px时要改变CSS */
+		/* @media(max-width:600px){
+		.cebianlan{
+			display: none;
+		}
+		.neirongqu{
+			flex-direction: column;
+		}
+		.shujuqu{
+			flex-direction: column;
+		}
+		.youqu{
+			margin-left: 8px;
+		}
+		.shuju{
+			margin: 0 0 8px;
+			flex:auto
+		}
+		.neirong::-webkit-scrollbar{
+			display: none;
+		}
+		} 
+		.button{
+			background-color: #ffffff;
+		} */
+		</style>
+	</head>
+	<body class="flex">
+	<!-- 侧边栏 -->
+	<div class="baiSe yinying cebianlan" style="width: 200px; z-index: 2;">
+		<!-- 头像栏 -->
+		<div style="padding: 25px;
+		 align-items: center;
+		  justify-content: center;
+		   border-bottom: 2px solid #eaeaea;"
+			class="flex">
+		   <img src="./diluc_face.png" width="60px" height="60px" alt="">
+		   <div style="margin-left: 10px;">
+			   Sxtc123
+		   </div>
+		</div>
+	<!-- 导航栏 -->
+	<div class="flex1">
+		<div class="daohang"><a href="./2.html">导航</a></div>
+		<div class="daohang"><a href="#">游戏</a></div>
+		<div class="daohang"><a href="#">艺术</a></div>
+		<div class="daohang"><a href="#">设计</a></div>
+		<div class="daohang"><a href="#">摄影</a></div>
+	    <div class="daohang"><a href="#">退出登录</a></div>
+	</div>
+	</div>
+	<!-- 主区域 -->
+	<div class="flex1 flex column ">
+		<!-- 头部栏 -->
+		<div style="height: 70px; z-index: 1;"class="baiSe yinying">
+			<div style="padding: 6px;text-align: center;text-shadow: 1px 4px 7px rgb(213, 208, 204); ">
+				<h3>公告栏：见者发财，大吉大利</h3>
+			</div>
+		</div>
+		<!-- 内容区 -->
+		<div style="overflow: auto;"class="neirongqu flex1 flex ">			
+			<!-- 左区 -->
+			<div style="flex: 3;" class="flex column mg8">
+				<!-- 数据区 -->
+				<div class="flex shujuqu">
+					<!-- 数据块 -->
+					<div style="height: 100px;" class="shuju flex1 baiSe mgr8 yinying">
+						<div class="box1">
+							<img src="./微信图片_20220428093554.jpg" alt="" width="50px">
+						</div>
+					</div>
+					<div style="height: 100px;" class="shuju flex1 baiSe mgr8 yinying"></div>
+					<div style="height: 100px;" class="shuju flex1 baiSe mgr8 yinying"></div>
+					<div style="height: 100px;" class="shuju flex1 baiSe yinying"></div>
+					
+				</div>
+				<!-- 列表区 -->
+				<div class="flex column">
+					<!-- 列表项 -->
+					<div style="height: 160px;" class="baiSe mgt8 yinying">
+						
+					</div>
+					<div style="height: 160px;" class="baiSe mgt8 yinying">
+						
+					</div>
+					<div style="height: 160px;" class="baiSe mgt8 yinying">
+						
+					</div>
+					<div style="height: 160px;" class="baiSe mgt8 yinying">
+						
+					</div>
+					<div style="height: 160px;" class="baiSe mgt8 yinying">
+						
+					</div>
+					<div style="height: 160px;" class="baiSe mgt8 yinying">
+						
+					</div>
+				</div>
+				
+			</div>
+			<!-- 右区 -->
+			<div style="flex: 1;" class="flex column mgr8 mgt8 youqu">
+				<!-- 提示区 -->
+				<div style="height: 150px;" class="baiSe yinying"></div>
+				<!-- 消息区 -->
+				<div style="height: 300px;" class="baiSe mgt8 yinying"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		//  //prompt 输入框
+		//  letprompt('请输入您的年龄')// //// alert 弹出警示框 输出的展示给用户的
+		// alert('您好，欢迎回来')
+		//  //console 控制台输出 测试用的
+		// console.log('能看到的')
+		// let uname = prompt('请输入您用户名')
+		// let age = prompt('请输入您的年龄 （根据国家相关政策必须输入年龄）')
+		
+		// console.log(uname+age)
+	</script>
+	</body>
+</html>
